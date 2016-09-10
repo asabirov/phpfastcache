@@ -224,7 +224,7 @@ class files extends DriverAbstract
           'Expired and removed [bytes]' => $removed,
           'Current [bytes]' => $res[ 'size' ],
         );
-        $res[ "data" ] = $content;
+        $res[ "data" ] = isset($content) ? $content : null;
         return $res;
     }
 
